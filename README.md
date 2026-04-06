@@ -18,7 +18,7 @@ I wrote a blog post, [Three Years of Logging My Inbox Count][blog-post], in whic
 
 * Set up a virtualenv, activate it, and install requirements:
   ```
-  virtualenv venv
+  virtualenv venv  # or: python3 -m venv venv
   . venv/bin/activate
   pip install -r requirements.txt
   ```
