@@ -12,12 +12,12 @@ LOG_FILE = 'inbox_count.log'
 
 log_date = lambda d: d.strftime('%Y-%m-%d %H:%M:%S')
 json_file_date = lambda d: d.strftime('%Y-%m-%d_%H.%M.%S')
-unix_date = lambda d: d.strftime('%s')
+unix_date = lambda d: str(int(d.timestamp()))
 
 now = datetime.now()
 info = gmail_thread_info(secret.email, secret.password)
 log_line = '%s\t%s\t%s' % (unix_date(now), log_date(now), len(info))
-print log_line
+print(log_line)
 
 with open(LOG_FILE, 'a') as f:
     f.write(log_line + '\n')
